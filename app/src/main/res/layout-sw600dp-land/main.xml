@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/frags"
+    android:showDividers="middle"
+    android:divider="?android:dividerHorizontal">
+    <!-- "Fragment A" -->
+    <fragment class="com.marinakhrolenko.mysupport.TitlesFragment"
+        android:id="@+id/list_frag"
+        android:layout_width="@dimen/titles_size"
+        android:layout_height="match_parent"/>
+    <!-- "Fragment B" -->
+    <fragment class="com.marinakhrolenko.mysupport.DetailsFragment"
+        android:id="@+id/det_frag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
