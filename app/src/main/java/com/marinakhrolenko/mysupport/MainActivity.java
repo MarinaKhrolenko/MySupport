@@ -7,7 +7,6 @@ import android.os.Bundle;
 
 public class MainActivity extends ActionBarActivity implements TitlesFragment.OnTitleClickListener {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,11 +16,9 @@ public class MainActivity extends ActionBarActivity implements TitlesFragment.On
     @Override
     public void onTitleClick(String title) {
         if (findViewById(R.id.det_frag) == null) {
-
             Intent intent = new Intent(this, DetailsActivity.class);
             intent.putExtra("item",title);
             startActivity(intent);
-
         } else {
             DetailsFragment fragment = (DetailsFragment) getSupportFragmentManager()
                     .findFragmentById(R.id.det_frag);
@@ -30,7 +27,6 @@ public class MainActivity extends ActionBarActivity implements TitlesFragment.On
             }
         }
     }
-
 }
 
 

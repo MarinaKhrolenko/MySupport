@@ -14,37 +14,26 @@ import android.widget.TextView;
 public class DetailsFragment extends Fragment {
 
     private String mItem;
-
     TextView tv;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         Bundle args = getArguments();
         if (args != null) {
             mItem = args.getString("item");
         }
-
-       // restartText(mItem);
-
           }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
         View v = inflater.inflate(R.layout.frag_details, container, false);
-
         tv = (TextView) v.findViewById(R.id.tv);
 
-
         if (!TextUtils.isEmpty(mItem)) {
-
-restartText(mItem);
+           restartText(mItem);
         }
-
         return v;
     }
-
 
     public static DetailsFragment newInstance(String someStr) {
         DetailsFragment frag = new DetailsFragment();
@@ -55,11 +44,8 @@ restartText(mItem);
     }
 
     public View restartText(String mItem) {
-
             tv.setText(mItem);
-
-
-        return tv;
+            return tv;
     }
     }
 

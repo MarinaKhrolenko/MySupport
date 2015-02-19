@@ -20,15 +20,9 @@ public class DetailsActivity extends ActionBarActivity {
         String details=intent.getStringExtra("item");
 
         Fragment frag=DetailsFragment.newInstance(details);
-
         FragmentManager fragmentManager=getSupportFragmentManager();
-
         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-
         fragmentTransaction.replace(R.id.linearInfo,frag);
-
         fragmentTransaction.commit();
-
-
     }
 }
